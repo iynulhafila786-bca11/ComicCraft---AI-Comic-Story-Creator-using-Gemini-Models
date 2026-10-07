@@ -1,0 +1,19 @@
+*{box-sizing:border-box}
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#171717;background:#f4f1ea}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at top left,#ffd16655,transparent 30%),radial-gradient(circle at bottom right,#89cff033,transparent 35%),#f4f1ea}
+.page{width:min(1000px,92%);margin:auto;padding:48px 0 72px}.wide{width:min(1200px,94%)}
+.hero{text-align:center;margin-bottom:28px}.badge{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.14em;padding:8px 12px;border:2px solid #171717;border-radius:999px;background:#fff}
+h1{font-size:clamp(2.2rem,6vw,4.6rem);line-height:.98;margin:16px 0}.hero p{max-width:720px;margin:auto;color:#555}
+.card{background:#fffebf;border:2px solid #171717;border-radius:24px;padding:30px;box-shadow:8px 8px 0 #171717}.center{text-align:center}
+.alert{padding:14px;margin-bottom:20px;border-radius:12px;background:#ffe3e3;border:1px solid #c33;color:#811}
+label{display:block;font-weight:800;margin-bottom:8px}
+textarea,input,select{width:100%;border:2px solid #222;border-radius:12px;padding:13px;font:inherit;background:white;margin-bottom:18px}
+textarea{resize:vertical}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 18px}
+.button{display:inline-block;border:2px solid #171717;border-radius:12px;background:#171717;color:white;padding:13px 18px;font-weight:800;text-decoration:none;cursor:pointer}
+.secondary{background:white;color:#171717}.hint{color:#666;font-size:.9rem}
+.comic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.panel-card{background:white;border:2px solid #171717;border-radius:20px;overflow:hidden;box-shadow:5px 5px 0 #171717}
+.panel-heading{padding:18px 18px 10px}.panel-heading span{font-size:.75rem;font-weight:800;text-transform:uppercase}.panel-heading h2{margin:5px 0 0}
+.panel-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-block:2px solid #171717}.scene,.story-copy{padding:0 18px}.story-copy{padding-bottom:16px}
+.actions{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}.success-icon{width:70px;height:70px;margin:auto;border:2px solid #171717;border-radius:50%;display:grid;place-items:center;font-size:2rem;font-weight:900}
+@media(max-width:760px){.grid,.comic-grid{grid-template-columns:1fr}.card{padding:20px}}
