@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Comic Preview</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<main class="page wide">
+  <section class="hero">
+    <span class="badge">COMIC PREVIEW</span>
+    <h1>Your comic is ready.</h1>
+  </section>
+
+  <section class="comic-grid">
+  {% for panel in layout %}
+    <article class="panel-card">
+      <div class="panel-heading">
+        <span>Panel {{ panel.panel_number }}</span>
+        <h2>{{ panel.title }}</h2>
+      </div>
+      <img src="{{ panel.image_url }}" alt="Panel {{ panel.panel_number }}">
+      <p class="scene"><em>{{ panel.scene_description }}</em></p>
+      <div class="story-copy">
+        <p><strong>Caption:</strong> {{ panel.caption }}</p>
+        <p><strong>Narration:</strong> {{ panel.narration }}</p>
+        {% if panel.dialogue %}<p><strong>Dialogue:</strong> {{ panel.dialogue }}</p>{% endif %}
+      </div>
+    </article>
+  {% endfor %}
+  </section>
+
+  <div class="actions">
+    <a class="button" href="{{ pdf_url }}">Download Your Comic as PDF</a>
+    <a class="button secondary" href="/">Create Another Comic</a>
+  </div>
+</main>
+</body>
+</html>
